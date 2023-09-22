@@ -1,0 +1,21 @@
+* {
+  background-color: #999;
+}
+.todo-wrapper {
+  width: 50rem;
+  margin: 4rem auto;
+}
+
+.todo {
+  margin: 0.8rem 0;
+}
+
+.todo-title {
+  font-style: bold;
+  font-size: 1.5rem;
+}
+
+.checked {
+  text-decoration: line-through;
+  color: red;
+}
