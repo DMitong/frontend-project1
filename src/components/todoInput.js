@@ -11,7 +11,8 @@ const TodoInput = () => {
     value={inputText}
     onChange={handleInputChange}
    />
-   <button disabled={!!editId}>Add Todo</button>
+   <button onClick={addTodo}>Add Todo</button>
+   {/* <button disabled={!!editId}>Add Todo</button> */}
   </div>
  );
 };

@@ -19,7 +19,7 @@ const TodoList = ({tab, onTabChange}) => {
 
  return (
    <>
-      <TabSelector tab={tab} onTabChange={onTabChange} />
+      {/* <TabSelector tab={tab} onTabChange={onTabChange} /> */}
       <ul>
         {(filteredTodos.length === 0) && <p>No todos for this tab</p>}
         {filteredTodos.map((todo) => (
