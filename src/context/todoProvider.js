@@ -25,6 +25,12 @@ export const TodoProvider = ({ children }) => {
   return () => (canceled = true);
  }, []);
 
+ const [tab, setTab] = useState('all');
+
+ const handleTabChange = (tab) => {
+  setTab(tab);
+}
+
  const addTodo = () => {
   const newTodo = {
    id: todos.length + 1,
@@ -65,6 +71,7 @@ export const TodoProvider = ({ children }) => {
     todos,
     editId,
     inputText,
+    handleTabChange,
     addTodo,
     setEditId,
     handleCheck,

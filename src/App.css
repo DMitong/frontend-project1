@@ -1,21 +1,90 @@
-* {
+body {
+  margin: 0;
+  padding: 0;
   background-color: #999;
+  font-family: Arial, sans-serif;
 }
+
+.App {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .todo-wrapper {
+  background: #fff;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 50rem;
   margin: 4rem auto;
 }
 
+.todo-list {
+  list-style: none;
+  padding: 0;
+}
+
 .todo {
-  margin: 0.8rem 0;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.todo input[type="checkbox"] {
+  margin-right: 10px;
 }
 
 .todo-title {
-  font-style: bold;
+  flex: 1;
   font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .checked {
   text-decoration: line-through;
-  color: red;
+  color: #aaa;
+}
+
+.todo-input input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  flex: 1;
+  outline: none;
+}
+
+.todo-input button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background: #007bff;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.todo-input button:hover {
+  background-color: #0056b3;
+}
+
+.tab-buttons {
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  border: none;
+  padding: 10px 15px;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+}
+
+.tab-btn.active {
+  border-color: #007bff;
+}
+
+.no-todos {
+  color: #aaa;
 }
