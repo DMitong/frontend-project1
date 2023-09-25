@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useMemo } from "react";
 import { useTodoContext } from "../context/todoProvider";
 import UpdateTodo from "./updateTodo";
 import TabSelector from "./tabSelector";
