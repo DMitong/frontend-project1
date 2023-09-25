@@ -2,12 +2,9 @@ import React from "react";
 import { useTodoContext } from "../context/todoProvider";
 
 const UpdateTodo = ({ todo }) => {
- const { editId, setEditId, handleCheck, handleDelete, updateTodo } =
+ const { editId, setEditId, handleCheck, handleDelete, updateTodo, handleEdit } =
   useTodoContext();
 
-  const handleEdit = () => {
-  setEditId(todo.id);
-   }
 
 // Validate input
 const handleUpdate = (text) => {

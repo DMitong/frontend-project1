@@ -1,7 +1,6 @@
 import React, { useMemo } from "react";
 import { useTodoContext } from "../context/todoProvider";
 import UpdateTodo from "./updateTodo";
-import TabSelector from "./tabSelector";
 
 const TodoList = ({tab, onTabChange}) => {
  const { todos } = useTodoContext();
@@ -19,7 +18,6 @@ const TodoList = ({tab, onTabChange}) => {
 
  return (
    <>
-      {/* <TabSelector tab={tab} onTabChange={onTabChange} /> */}
       <ul>
         {(filteredTodos.length === 0) && <p>No todos for this tab</p>}
         {filteredTodos.map((todo) => (

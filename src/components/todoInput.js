@@ -12,7 +12,7 @@ const TodoInput = () => {
     onChange={handleInputChange}
     className="input-box"
    />
-   <button onClick={addTodo} className="submit-button">Add Todo</button>
+   <button onClick={addTodo} disabled={!!editId} className="submit-button">Add Todo</button>
   </div>
  );
 };
