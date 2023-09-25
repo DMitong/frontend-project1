@@ -13,18 +13,15 @@ const TodoList = ({tab, onTabChange}) => {
   } else {
     return !todo.completed;
   }
-});
-  if (filteredTodos.length === 0) {
-  return <p>No todos for this tab</p>
-}
-}, [todos, tab])
+}),[todos, tab])
 
 
 
  return (
    <>
-      <TabSelector tab={tab} onTabChange={handleTabChange} />
+      <TabSelector tab={tab} onTabChange={onTabChange} />
       <ul>
+        {(filteredTodos.length === 0) && <p>No todos for this tab</p>}
         {filteredTodos.map((todo) => (
           <UpdateTodo key={todo.id} todo={todo} />
         ))}
