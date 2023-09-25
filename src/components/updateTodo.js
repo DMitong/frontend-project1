@@ -17,21 +17,24 @@ const handleUpdate = (text) => {
 
  return (
   <li className="todo">
-   <input
-    type="checkbox"
-    checked={todo.completed}
-    onChange={() => handleCheck(todo.id)}
-   />
    {editId === todo.id ? (
-    <input
+   
+      <input
      type="text"
      value={todo.title}
      onChange={(e) => handleEdit(todo.id, e.target.value)}
     />
    ) : (
+    <>
+    <input
+    type="checkbox"
+    checked={todo.completed}
+    onChange={() => handleCheck(todo.id)}
+   />
     <span className={`todo-title ${todo.completed && "checked"}`}>
      {todo.title}
     </span>
+    </>
    )}
    {editId === todo.id ? (
     <button onClick={() => setEditId(null)}>✅</button>

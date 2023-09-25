@@ -4,7 +4,8 @@ import { useTodoContext } from "../context/todoProvider";
 const TodoInput = () => {
  const { inputText, addTodo, handleInputChange, editId } = useTodoContext();
  return (
-  <div className="input">
+   <div className="input">
+   <h1>ToDo App</h1>
    <input
     type="text"
     placeholder="Add a new todo..."
