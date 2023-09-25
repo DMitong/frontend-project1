@@ -5,9 +5,7 @@ import TabSelector from "./tabSelector";
 
 const TodoList = ({tab, onTabChange}) => {
  const { todos } = useTodoContext();
-
- useEffect(() => {
-  const filteredTodos = todos.filter(todo => {
+ const filteredTodos = useMemo(() => todos.filter(todo => {
   if (tab === 'all') {
     return true;
   } else if (tab === 'completed') {
@@ -21,20 +19,17 @@ const TodoList = ({tab, onTabChange}) => {
 }
 }, [todos, tab])
 
+
+
  return (
-  <>
-  {tab && 
-    <TabSelector
-      currentTab={tab}
-      onTabChange={onTabChange} 
-    />
-  }
-  <ul>
-   {filteredTodos.map((todo) => (
-    <UpdateTodo key={todo.id} todo={todo} />
-   ))}
-  </ul>
-  </>
+   <>
+      <TabSelector tab={tab} onTabChange={handleTabChange} />
+      <ul>
+        {filteredTodos.map((todo) => (
+          <UpdateTodo key={todo.id} todo={todo} />
+        ))}
+      </ul>
+    </>
  );
 };
 
