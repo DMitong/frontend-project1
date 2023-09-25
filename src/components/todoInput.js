@@ -4,15 +4,15 @@ import { useTodoContext } from "../context/todoProvider";
 const TodoInput = () => {
  const { inputText, addTodo, handleInputChange, editId } = useTodoContext();
  return (
-  <div>
+  <div className="input">
    <input
     type="text"
     placeholder="Add a new todo..."
     value={inputText}
     onChange={handleInputChange}
+    className="input-box"
    />
-   <button onClick={addTodo}>Add Todo</button>
-   {/* <button disabled={!!editId}>Add Todo</button> */}
+   <button onClick={addTodo} className="submit-button">Add Todo</button>
   </div>
  );
 };

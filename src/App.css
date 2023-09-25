@@ -52,6 +52,31 @@ body {
   color: #aaa;
 }
 
+.input-box {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
+    font-size: 16px;
+    color: #333;
+    width: 300px;
+    margin-right: 10px;
+}
+
+.submit-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* .input {
+  display: flex;
+  justify-content: space-between;
+} */
+
 .todo-input input {
   padding: 10px;
   border: 1px solid #ddd;
@@ -80,6 +105,9 @@ body {
   margin-bottom: 20px;
   margin-top: 20px;
   text-align: center;
+  display: flex;
+  gap: 8px;
+  width: 100%;
 }
 
 .tab-btn {
@@ -91,11 +119,12 @@ body {
   color: #fff;
   border-radius: 6px;
   margin-right: 10px;
+  flex: 1 1 0%;
   transition: background-color 0.3s;
 }
 
 .tab-btn.active {
-  background-color: #dd8635;
+  background-color: #1e3a2e;
 }
 
 .no-todos {
