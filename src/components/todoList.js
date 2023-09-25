@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useTodoContext } from "../context/todoProvider";
 import UpdateTodo from "./updateTodo";
+import TabSelector from "./tabSelector";
 
 const TodoList = ({tab, onTabChange}) => {
  const { todos } = useTodoContext();
@@ -23,7 +24,7 @@ const TodoList = ({tab, onTabChange}) => {
  return (
   <>
   {tab && 
-    <TabSelector 
+    <TabSelector
       currentTab={tab}
       onTabChange={onTabChange} 
     />

@@ -2,7 +2,7 @@ import React from "react";
 import { useTodoContext } from "../context/todoProvider";
 
 const TodoInput = () => {
- const { inputText, addTodo, handleInputChange } = useTodoContext();
+ const { inputText, addTodo, handleInputChange, editId } = useTodoContext();
  return (
   <div>
    <input
@@ -11,7 +11,7 @@ const TodoInput = () => {
     value={inputText}
     onChange={handleInputChange}
    />
-   <button disabled={editing}>Add Todo</button>
+   <button disabled={!!editId}>Add Todo</button>
   </div>
  );
 };
